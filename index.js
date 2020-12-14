@@ -50,7 +50,13 @@ class Todos {
 
 const todoList = new Todos();
 
-const jsonContent = fs.readFileSync("todos.json", "utf-8");
+let jsonContent;
+
+try {
+jsonContent = fs.readFileSync("todos.json", "utf-8");
+} catch (err){
+  console.log(err);
+}
 const jsonTodos = JSON.parse(jsonContent);
 
 for (let i = 0; i < jsonTodos.length; i++) {
@@ -92,5 +98,9 @@ Parancssori argumentumok:
 }
 
 let jsonTodosWrite = todoList.getList();
-
-fs.writeFileSync("todos.json", JSON.stringify(jsonTodosWrite, null, 4));
+ 
+try {
+  fs.writeFileSync("todos.json", JSON.stringify(jsonTodosWrite, null, 4));
+} catch (err) {
+  console.log (err);
+}
