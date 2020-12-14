@@ -1,0 +1,22 @@
+[
+    {
+        "content": "cicát etetni",
+        "status": true
+    },
+    {
+        "content": "cicát itatni",
+        "status": true
+    },
+    {
+        "content": "cicát altatni",
+        "status": false
+    },
+    {
+        "content": "Medvét kergetni",
+        "status": true
+    },
+    {
+        "content": "Macskát simogatni",
+        "status": false
+    }
+]
